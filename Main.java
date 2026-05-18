@@ -23,9 +23,7 @@ public class Main {
             opcion = sc.nextInt();
             sc.nextLine();
 
-            switch (opcion) {
-
-                case 1:
+                if(opcion == 1){
 
                     System.out.println("Ingrese  su cedula: ");
                     String cedula = sc.nextLine();
@@ -62,9 +60,9 @@ public class Main {
 
                     estudiante.mostrarDatos();
 
-                    break;
-
-                case 2:
+                }
+                
+                else if(opcion ==2){
 
                     System.out.println("Ingrese cedula: ");
                     String cedulaSalida = sc.nextLine();
@@ -88,9 +86,9 @@ public class Main {
                         System.out.println("Estudiante no encontrado");
                     }
 
-                    break;
-
-                case 3:
+                } 
+                
+                else if(opcion ==3){
                 
                     if (lista.isEmpty()) {
 
@@ -106,20 +104,20 @@ public class Main {
                         }
                     }
 
-                    break;
+             } 
 
-                case 4:
+             else if(opcion ==4){
 
                     System.out.println("Sistema finalizado");
-                    break;
 
-                default:
+                } else {
 
                     System.out.println("Opcion incorrecta");
-            }
+                }
 
         } while (opcion != 4);
 
         sc.close();
     }
 }
+
